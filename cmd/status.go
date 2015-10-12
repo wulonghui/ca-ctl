@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/coreos/etcd-ca/depot"
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/wulonghui/ca-ctl/depot"
+	"github.com/wulonghui/ca-ctl/pkix"
 )
 
 func NewStatusCommand() cli.Command {

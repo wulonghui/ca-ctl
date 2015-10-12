@@ -21,9 +21,9 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/golang.org/x/crypto/ssh/terminal"
-	"github.com/coreos/etcd-ca/depot"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/golang.org/x/crypto/ssh/terminal"
+	"github.com/wulonghui/ca-ctl/depot"
 )
 
 var (

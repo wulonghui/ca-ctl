@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/coreos/etcd-ca/depot"
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/wulonghui/ca-ctl/depot"
+	"github.com/wulonghui/ca-ctl/pkix"
 )
 
 func NewSignCommand() cli.Command {
@@ -57,7 +57,7 @@ func newSignAction(c *cli.Context) {
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Get CA certificate error:", err)
 		if isFileNotExist(err) {
-			fmt.Fprintln(os.Stderr, "Please run 'etcd-ca init' to initial the depot.")
+			fmt.Fprintln(os.Stderr, "Please run 'ca-ctl init' to initial the depot.")
 		}
 		os.Exit(1)
 	}

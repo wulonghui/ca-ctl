@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/coreos/etcd-ca/depot"
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/wulonghui/ca-ctl/depot"
+	"github.com/wulonghui/ca-ctl/pkix"
 )
 
 func NewInitCommand() cli.Command {
@@ -32,8 +32,8 @@ func NewInitCommand() cli.Command {
 			cli.StringFlag{"passphrase", "", "Passphrase to encrypt private-key PEM block", ""},
 			cli.IntFlag{"key-bits", 4096, "Bit size of RSA keypair to generate", ""},
 			cli.IntFlag{"years", 10, "How long until the CA certificate expires", ""},
-			cli.StringFlag{"organization", "etcd-ca", "CA Certificate organization", ""},
-			cli.StringFlag{"country", "USA", "CA Certificate country", ""},
+			cli.StringFlag{"organization", "", "CA Certificate organization", ""},
+			cli.StringFlag{"country", "", "CA Certificate country", ""},
 		},
 		Action: initAction,
 	}

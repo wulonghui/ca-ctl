@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/coreos/etcd-ca/depot"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/wulonghui/ca-ctl/depot"
 )
 
 func NewChainCommand() cli.Command {
@@ -36,7 +36,7 @@ func newChainAction(c *cli.Context) {
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Get CA certificate error:", err)
 		if isFileNotExist(err) {
-			fmt.Fprintln(os.Stderr, "Please run 'etcd-ca init' to initial the depot.")
+			fmt.Fprintln(os.Stderr, "Please run 'ca-ctl init' to initial the depot.")
 		}
 		os.Exit(1)
 	}

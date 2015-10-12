@@ -22,7 +22,7 @@ import (
 )
 
 const (
-	DefaultFileDepotDir = ".etcd-ca"
+	DefaultFileDepotDir = ".ca"
 )
 
 // Tag includes name and permission requirement

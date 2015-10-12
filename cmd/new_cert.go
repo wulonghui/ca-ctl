@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/coreos/etcd-ca/depot"
-	"github.com/coreos/etcd-ca/pkix"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/wulonghui/ca-ctl/depot"
+	"github.com/wulonghui/ca-ctl/pkix"
 )
 
 func NewNewCertCommand() cli.Command {
@@ -33,8 +33,8 @@ func NewNewCertCommand() cli.Command {
 			cli.StringFlag{"ip", "127.0.0.1", "IP address of the host", ""},
 			cli.IntFlag{"key-bits", 4096, "Bit size of RSA keypair to generate", ""},
 			cli.StringFlag{"domain", "", "Use domain instead of IP address for SAN", ""},
-			cli.StringFlag{"organization", "etcd-ca", "Certificate organization", ""},
-			cli.StringFlag{"country", "USA", "Certificate country", ""},
+			cli.StringFlag{"organization", "", "Certificate organization", ""},
+			cli.StringFlag{"country", "", "Certificate country", ""},
 		},
 		Action: newCertAction,
 	}

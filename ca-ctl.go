@@ -17,16 +17,16 @@ package main
 import (
 	"os"
 
-	"github.com/coreos/etcd-ca/Godeps/_workspace/src/github.com/codegangsta/cli"
-	"github.com/coreos/etcd-ca/cmd"
-	"github.com/coreos/etcd-ca/depot"
+	"github.com/wulonghui/ca-ctl/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/wulonghui/ca-ctl/cmd"
+	"github.com/wulonghui/ca-ctl/depot"
 )
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "etcd-ca"
+	app.Name = "ca-ctl"
 	app.Version = "0.1.0"
-	app.Usage = "A very simple CA manager written in Go. Primarly used for coreos/etcd SSL/TLS testing."
+	app.Usage = "A very simple CA manager written in Go."
 	app.Flags = []cli.Flag{
 		cli.StringFlag{"depot-path", depot.DefaultFileDepotDir, "Location to store certificates, keys and other files.", ""},
 	}
